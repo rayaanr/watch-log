@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CircleUser } from "lucide-react";
 import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
     return (
@@ -20,6 +21,7 @@ export default function Header() {
 
             <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
                 <div className="ml-auto flex-1 sm:flex-initial">
+                    <ModeToggle />
                     <Button variant="secondary" size="icon" className="rounded-full">
                         <CircleUser className="h-5 w-5" />
                         <span className="sr-only">Toggle user menu</span>
