@@ -6,7 +6,7 @@ import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 
-import { SunFilledIcon, MoonFilledIcon } from "@/assets/icons";
+import { SunIcon, MoonIcon } from "@/assets/icons";
 import { cn } from "@/utils/cn";
 
 export interface ThemeSwitchProps {
@@ -61,7 +61,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className, classNames }) => 
                     ),
                 })}
             >
-                {!isSelected || isSSR ? <SunFilledIcon size={22} /> : <MoonFilledIcon size={22} />}
+                {!isSelected || isSSR ? <SunIcon className="text-default-400 size-6" /> : <MoonIcon className="text-default-400 size-6" />}
             </div>
         </Component>
     );
