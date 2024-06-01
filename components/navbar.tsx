@@ -7,20 +7,16 @@ import {
     NavbarItem,
     NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
-import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-    SearchIcon,
-    Logo,
-} from "@/assets/icons";
+import { SearchIcon, Logo } from "@/assets/icons";
+import { cn } from "@/utils/cn";
 
 export const Navbar = () => {
     const searchInput = (
@@ -57,7 +53,7 @@ export const Navbar = () => {
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
                             <NextLink
-                                className={clsx(
+                                className={cn(
                                     linkStyles({ color: "foreground" }),
                                     "data-[active=true]:text-primary data-[active=true]:font-medium"
                                 )}
