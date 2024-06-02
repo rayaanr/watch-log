@@ -4,7 +4,7 @@ import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/utils/primitives";
+import { title, subtitle } from "@/styles/primitives";
 
 export default function Home() {
     return (
@@ -17,6 +17,7 @@ export default function Home() {
                 <h2 className={subtitle({ class: "mt-4" })}>
                     Beautiful, fast and modern React UI library.
                 </h2>
+                <p className="text-5xl"></p>
             </div>
 
             <div className="flex gap-3">

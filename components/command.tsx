@@ -22,7 +22,7 @@ export default function SearchCommand() {
     // Open the modal, on command + k
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "/" && (e.ctrlKey || e.metaKey)) {
+            if (e.key === "k" && (e.ctrlKey || e.metaKey)) {
                 onOpen();
             }
         };
